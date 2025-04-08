@@ -45,6 +45,37 @@ You can verify that the server is running on port `8000` using the following com
 
 ---
 
+## Running Tests
+
+The project includes a comprehensive test suite using `pytest`. To run the tests:
+
+```bash
+# Install test dependencies
+pip install -r requirements.txt
+
+# Run tests with verbose output
+pytest -v
+
+# Run tests with coverage report
+pytest --cov=.
+```
+
+### Test Coverage
+The test suite includes:
+- Basic functionality tests for addition and subtraction
+- Input validation and type checking
+- Edge cases with large numbers
+- API endpoint testing for greetings
+
+All tests are located in `test_server.py` and cover:
+- `add()` function
+- `subtract()` function
+- `get_greeting()` function
+- Type error handling
+- Edge cases handling
+
+---
+
 ## Tools Using the Server
 
 To integrate this server with tools like Cursor or Claude, use the following `mcp.json` configuration file:
