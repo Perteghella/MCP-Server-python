@@ -1,4 +1,6 @@
 mcp[cli]
-pytest==8.0.0
-pytest-cov==4.1.0
+pytest
+pytest-cov
 fastapi
+pytest-asyncio
+httpx
