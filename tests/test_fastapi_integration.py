@@ -24,4 +24,22 @@ async def test_get_todo_tool():
 def test_fastapi_app_initialization():
     """Test dell'inizializzazione dell'app FastAPI"""
     assert app is not None
-    assert app.title == "FastAPI" 
+    assert app.title == "FastAPI"
+
+def test_list_tools_endpoint():
+    """Test dell'endpoint /tools"""
+    response = client.get("/tools")
+    assert response.status_code == 200
+    tools = response.json()
+    
+    # Verifica che ci siano almeno i tool che conosciamo
+    tool_names = {tool["name"] for tool in tools}
+    expected_tools = {"add", "subtract", "get_todo_tool"}
+    assert expected_tools.issubset(tool_names)
+    
+    # Verifica la struttura dei dati per un tool
+    for tool in tools:
+        assert "name" in tool
+        assert "description" in tool
+        assert "parameters" in tool
+        assert "returns" in tool 

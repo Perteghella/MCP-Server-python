@@ -13,7 +13,7 @@ Run the following commands to set up your Python environment:
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
+uv pip install -r requirements.txt
 ```
 
 ---
@@ -99,3 +99,9 @@ To integrate this server with tools like Cursor or Claude, use the following `mc
 - The server runs on `localhost` and listens on port `8000` using uvicorn.
 
 Feel free to contribute or open issues if you encounter any problems!
+
+
+## FastAPI come tool MCP
+
+da una idea vista qui https://medium.com/@CodePulse/5-open-source-mcp-servers-thatll-make-your-ai-agents-unstoppable-89498fcada16
+

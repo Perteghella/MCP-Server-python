@@ -3,4 +3,6 @@ pytest
 pytest-cov
 fastapi
 pytest-asyncio
+nest-asyncio
 httpx
+requests
